@@ -4,7 +4,7 @@
 int main(int argc, char *argv[])
 {
     FILE *input_fp = fopen("a.wav", "r");
-    FILE *output_fp = fopen("encoded", "w");
+    FILE *output_fp = fopen("base16_encoded", "w");
     unsigned char chunk[44];
     size_t data_length = 10100;
     size_t data_idx = 0;
