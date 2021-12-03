@@ -1,13 +1,13 @@
-binary: binary-encode binary-decode
-	./binary_encode && ./binary_decode
+variable_bit_length: variable_bit_length-encode variable_bit_length-decode
+	./variable_bit_length_encode.out && ./variable_bit_length_decode.out
 
-binary-all: clean binary
+variable_bit_length-all: clean variable_bit_length
 
-binary-encode:
-	gcc -g binary_encode.c -o binary_encode.out
+variable_bit_length-encode:
+	gcc -g variable_bit_length_encode.c -o variable_bit_length_encode.out
 
-binary-decode:
-	gcc -g binary_decode.c -o binary_decode.out
+variable_bit_length-decode:
+	gcc -g variable_bit_length_decode.c -o variable_bit_length_decode.out
 
 normal: encode decode
 	./encode.out && ./decode.out
